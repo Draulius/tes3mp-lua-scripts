@@ -165,7 +165,3 @@ end)
 customEventHooks.registerHandler("OnPlayerLevel", function(eventStatus, pid)
     CalculateVanillaMaxHealth(pid)
 end)
-
-customEventHooks.registerHandler("OnPlayerEndCharGen", function(eventStatus, pid)
-    CalculateVanillaMaxHealth(pid)
-end)

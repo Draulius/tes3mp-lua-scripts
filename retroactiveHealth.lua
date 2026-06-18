@@ -4,8 +4,8 @@
 -- =====================================================
 -- Staff characters are not corrected on login
 -- ====================== CONFIG =======================
-local allowHealthDecrease = false    -- If true, allows HP to be corrected downwards (less safe for boosted characters).
-local applyLadyBonus      = false    -- If true, The Lady birthsign gives +25 Endurance to all health gains. Keep false for default TES3MP 0.8.1 behavior.
+local allowHealthDecrease = false    -- If true, allows HP to be corrected downwards (less safe for boosted characters)
+local applyLadyBonus      = false    -- If true, The Lady birthsign gives +25 Endurance to all health gains. Keep false for default TES3MP 0.8.1 behavior
 -- =====================================================
 --Do not edit below unless you know what you are doing
 

@@ -66,7 +66,7 @@ local function CalculateVanillaMaxHealth(pid)
     local race = string.lower(character.race or "")
     local birthsign = string.lower(character.birthsign or "")
 
-    -- Proper gender detection using official API
+    -- Gender detection
     local isMale = tes3mp.GetIsMale(pid) == 1
     local genderIndex = isMale and 0 or 1
 
@@ -103,6 +103,7 @@ local function CalculateVanillaMaxHealth(pid)
     if favored["Strength"] then startStr = startStr + 10 end
     if favored["Endurance"] then startEnd = startEnd + 10 end
 
+    --Check for Lady bonus
     local ladyBonus = 0
     if applyLadyBonus and birthsign:find("lady") then
         ladyBonus = 25

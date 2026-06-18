@@ -2,7 +2,7 @@
 -- Made by Lindran, originally for Mahkan Server, now released for public use.
 -- This script gives you the full health bonus of Endurance retroactively, no matter how late you put points towards it.
 -- ====================== CONFIG =======================
-local allowHealthDecrease = false -- If true, allows HP to be corrected downwards (so will affect boosted characters). Staff characters are not affected.
+local allowHealthDecrease = false -- If true, allows HP to be corrected downwards (so will affect boosted characters). Staff chars are not affected.
 local applyLadyBonus = false -- If true, The Lady birthsign gives +25 Endurance to all health gains. Keep false for default TES3MP 0.8.1 behavior.
 -- =====================================================
 -- Do not edit below unless you know what you are doing.

@@ -5,5 +5,5 @@ In other words, if you ignored Endurance for many levels, you can still put poin
 Staff characters are exempt to being automatically adjusted on login, however the script will still fire if you change your level like with console.
 
 Additionally, in the script's configuration:
-1. You can turn The Lady birthsign vanilla HP bonus effect on or off. (false by default)
+1. You can turn The Lady birthsign vanilla HP bonus behavior on or off. (false by default)
 2. You can choose to enable HP being possibly corrected downwards. (false by default)

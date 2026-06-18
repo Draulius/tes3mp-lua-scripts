@@ -6,4 +6,4 @@ Staff characters are exempt to being automatically adjusted on login, however th
 
 Additionally, in the script's configuration:
 1. You can turn The Lady birthsign vanilla HP bonus effect on or off. (false by default)
-2. You can choose to enable HP being corrected downwards for more security versus boosted characters. (false by default)
+2. You can choose to enable HP being possibly corrected downwards. (false by default)

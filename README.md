@@ -3,7 +3,7 @@ My TES3MP scripts.
 Retroactive Health:
 This script gives the full health bonus of Endurance retroactively, no matter how late you put points towards Endurance. Also adds the option of enabling The Lady sign's vanilla hp bonus behavior.
 
-In other words, if you ignored Endurance for many levels, you can still put points into it and reach the best possible HP for your current level.
+In other words, if you ignored Endurance for many levels, you can still put points into it and reach the best possible HP for your current level. No more need to rush it early.
 
 Staff characters are exempt to being automatically adjusted on login, however the script will still fire if you change your level like with console.
 

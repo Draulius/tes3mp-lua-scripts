@@ -80,6 +80,7 @@ local function CalculateVanillaMaxHealth(pid)
         if majorAttrs:lower():find("endurance") then favored["Endurance"] = true end
     else
         local defaultClassId = tes3mp.GetDefaultClass(pid)
+        local className = ""
         if defaultClassId and defaultClassId ~= "" then
             className = string.lower(defaultClassId)
         end

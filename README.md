@@ -1,3 +1,6 @@
+My TES3MP scripts.
+
+==RETROACTIVE HEALTH==
 This script gives the full health bonus effect of Endurance retroactively, no matter how late you put points towards Endurance. Also allows the option of giving The Lady Sign vanilla health bonus behavior.
 
 In other words, if you ignored Endurance for many levels, you can still put points into it and reach the max possible HP for your character!

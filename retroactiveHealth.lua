@@ -1,7 +1,6 @@
 -- =====================================================
 -- Retroactive Health - TES3MP 0.8.1
 -- Made by Lindran, originally for Mahkan Server, now released for public use
--- Use or edit this script as you see fit, but I request that you give us credit
 -- ====================== CONFIG =======================
 local allowHealthDecrease = false    -- If true, allows HP to be corrected downwards (so will affect boosted characters). Staff characters are not affected
 local applyLadyBonus      = false    -- If true, The Lady birthsign gives +25 Endurance to all health gains. Keep false for default TES3MP 0.8.1 behavior

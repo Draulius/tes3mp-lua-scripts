@@ -63,14 +63,14 @@ local function CalculateVanillaMaxHealth(pid)
     local currentStr = tes3mp.GetAttributeBase(pid, STRENGTH_ID)
 
     local character = player.data.character or {}
-    local race = string.lower(character.race or "nord")
+    local race = string.lower(character.race or "dark elf")
     local birthsign = string.lower(character.birthsign or "")
 
     -- Proper gender detection using official API
     local isMale = tes3mp.GetIsMale(pid) == 1
     local genderIndex = isMale and 0 or 1
 
-    local stats = startingStats[race] or startingStats["nord"]
+    local stats = startingStats[race] or startingStats["dark elf"]
     local startStr = (stats.str and stats.str[genderIndex]) or 40
     local startEnd = (stats.endu and stats.endu[genderIndex]) or 40
 

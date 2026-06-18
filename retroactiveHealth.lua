@@ -1,5 +1,5 @@
 -- =====================================================
--- Retroactive Health v1.01 - TES3MP 0.8.1
+-- Retroactive Health v1.02 - TES3MP 0.8.1
 -- Made by Lindran, originally for Mahkan Server, now released for public use.
 -- ====================== CONFIG =======================
 local allowHealthDecrease = false -- If true, allows HP to be corrected downwards (so will affect boosted characters). Staff characters are not affected.

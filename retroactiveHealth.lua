@@ -154,13 +154,13 @@ local function CalculateVanillaMaxHealth(pid)
 end
 
 -- Event handlers
-    if tes3mp.GetLevel(pid) <= 1 then return end -- Safety guard for new characters
-    CalculateVanillaMaxHealth(pid)
-end)
-
 customEventHooks.registerHandler("OnPlayerAuthentified", function(eventStatus, pid)
     local player = Players[pid]
     if player and player:IsServerStaff() then return end
+
+    if tes3mp.GetLevel(pid) <= 1 then return end -- Safety guard for new characters
+    CalculateVanillaMaxHealth(pid)
+end)
 
 customEventHooks.registerHandler("OnPlayerLevel", function(eventStatus, pid)
     CalculateVanillaMaxHealth(pid)

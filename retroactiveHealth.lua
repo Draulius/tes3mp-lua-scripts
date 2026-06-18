@@ -1,4 +1,3 @@
--- =====================================================
 -- Retroactive Health v1.03 - TES3MP 0.8.1
 -- Made by Lindran, originally for Mahkan Server, now released for public use.
 -- ====================== CONFIG =======================

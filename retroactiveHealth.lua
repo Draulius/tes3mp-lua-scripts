@@ -2,7 +2,6 @@
 -- Retroactive Health - TES3MP 0.8.1
 -- Made by Lindran, originally for Mahkan Server, now released for public use
 -- Use or edit this script as you see fit, I just request that you give us credit
--- =====================================================
 -- Note: Staff characters are not corrected on login
 -- ====================== CONFIG =======================
 local allowHealthDecrease = false    -- If true, allows HP to be corrected downwards (less safe for boosted characters)

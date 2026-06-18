@@ -4,7 +4,7 @@
 -- =====================================================
 
 -- ====================== CONFIG =======================
-local allowHealthDecrease = false    -- If true, allows Hp to be corrected dowards (less safe for boosted characters).
+local allowHealthDecrease = false    -- If true, allows Hp to be corrected downwards (less safe for boosted characters).
 local applyLadyBonus      = false    -- If true, The Lady birthsign gives +25 Endurance to all health gains (from level 1 onward). Keep false for default TES3MP 0.8.1 behavior.
 -- =====================================================
 --Do not edit below unless you know what you are doing

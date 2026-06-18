@@ -1,5 +1,5 @@
 -- =====================================================
--- Retroactive Health Public Release - TES3MP 0.8.1
+-- Retroactive Health - TES3MP 0.8.1
 -- Made by Lindran, originally for Mahkan Server, now released for public use
 -- Use or edit this script as you see fit, I just request that you give us credit
 -- ====================== CONFIG =======================

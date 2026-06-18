@@ -3,45 +3,45 @@
 -- Made by Lindran, originally for Mahkan Server, now released for public use.
 -- ====================== CONFIG =======================
 local allowHealthDecrease = false -- If true, allows HP to be corrected downwards (so will affect boosted characters). Staff characters are not affected.
-local applyLadyBonus = false      -- If true, The Lady birthsign gives +25 Endurance to all health gains. Keep false for default TES3MP 0.8.1 behavior.
+local applyLadyBonus = false -- If true, The Lady birthsign gives +25 Endurance to all health gains. Keep false for default TES3MP 0.8.1 behavior.
 -- =====================================================
 -- Do not edit below unless you know what you are doing.
 
 local startingStats = {
-    ["argonian"]  = { str = { [0] = 40, [1] = 40 }, endu = { [0] = 30, [1] = 30 } },
-    ["breton"]    = { str = { [0] = 40, [1] = 30 }, endu = { [0] = 30, [1] = 30 } },
-    ["dark elf"]  = { str = { [0] = 40, [1] = 40 }, endu = { [0] = 40, [1] = 30 } },
-    ["high elf"]  = { str = { [0] = 30, [1] = 30 }, endu = { [0] = 40, [1] = 30 } },
-    ["imperial"]  = { str = { [0] = 40, [1] = 40 }, endu = { [0] = 40, [1] = 40 } },
-    ["khajiit"]   = { str = { [0] = 40, [1] = 30 }, endu = { [0] = 30, [1] = 40 } },
-    ["nord"]      = { str = { [0] = 50, [1] = 50 }, endu = { [0] = 50, [1] = 40 } },
-    ["orc"]       = { str = { [0] = 45, [1] = 45 }, endu = { [0] = 50, [1] = 50 } },
-    ["redguard"]  = { str = { [0] = 50, [1] = 40 }, endu = { [0] = 50, [1] = 50 } },
-    ["wood elf"]  = { str = { [0] = 30, [1] = 30 }, endu = { [0] = 30, [1] = 30 } },
+    ["argonian"] = { str = { [0] = 40, [1] = 40 }, endu = { [0] = 30, [1] = 30 } },
+    ["breton"] = { str = { [0] = 40, [1] = 30 }, endu = { [0] = 30, [1] = 30 } },
+    ["dark elf"] = { str = { [0] = 40, [1] = 40 }, endu = { [0] = 40, [1] = 30 } },
+    ["high elf"] = { str = { [0] = 30, [1] = 30 }, endu = { [0] = 40, [1] = 30 } },
+    ["imperial"] = { str = { [0] = 40, [1] = 40 }, endu = { [0] = 40, [1] = 40 } },
+    ["khajiit"] = { str = { [0] = 40, [1] = 30 }, endu = { [0] = 30, [1] = 40 } },
+    ["nord"] = { str = { [0] = 50, [1] = 50 }, endu = { [0] = 50, [1] = 40 } },
+    ["orc"] = { str = { [0] = 45, [1] = 45 }, endu = { [0] = 50, [1] = 50 } },
+    ["redguard"] = { str = { [0] = 50, [1] = 40 }, endu = { [0] = 50, [1] = 50 } },
+    ["wood elf"] = { str = { [0] = 30, [1] = 30 }, endu = { [0] = 30, [1] = 30 } },
 }
 
 local vanillaClassFavored = {
-    ["acrobat"]      = {"Agility", "Endurance"},
-    ["agent"]        = {"Personality", "Speed"},
-    ["archer"]       = {"Agility", "Strength"},
-    ["assassin"]     = {"Agility", "Intelligence"},
-    ["barbarian"]    = {"Strength", "Speed"},
-    ["bard"]         = {"Personality", "Intelligence"},
-    ["battlemage"]   = {"Intelligence", "Strength"},
-    ["crusader"]     = {"Willpower", "Strength"},
-    ["healer"]       = {"Willpower", "Personality"},
-    ["knight"]       = {"Strength", "Personality"},
-    ["mage"]         = {"Intelligence", "Willpower"},
-    ["monk"]         = {"Agility", "Willpower"},
-    ["nightblade"]   = {"Willpower", "Speed"},
-    ["pilgrim"]      = {"Personality", "Endurance"},
-    ["rogue"]        = {"Speed", "Personality"},
-    ["scout"]        = {"Endurance", "Speed"},
-    ["sorcerer"]     = {"Intelligence", "Endurance"},
-    ["spellsword"]   = {"Willpower", "Endurance"},
-    ["thief"]        = {"Speed", "Agility"},
-    ["warrior"]      = {"Strength", "Endurance"},
-    ["witchhunter"]  = {"Intelligence", "Agility"},
+    ["acrobat"] = {"Agility", "Endurance"},
+    ["agent"] = {"Personality", "Speed"},
+    ["archer"] = {"Agility", "Strength"},
+    ["assassin"] = {"Agility", "Intelligence"},
+    ["barbarian"] = {"Strength", "Speed"},
+    ["bard"] = {"Personality", "Intelligence"},
+    ["battlemage"] = {"Intelligence", "Strength"},
+    ["crusader"] = {"Willpower", "Strength"},
+    ["healer"] = {"Willpower", "Personality"},
+    ["knight"] = {"Strength", "Personality"},
+    ["mage"] = {"Intelligence", "Willpower"},
+    ["monk"] = {"Agility", "Willpower"},
+    ["nightblade"] = {"Willpower", "Speed"},
+    ["pilgrim"] = {"Personality", "Endurance"},
+    ["rogue"] = {"Speed", "Personality"},
+    ["scout"] = {"Endurance", "Speed"},
+    ["sorcerer"] = {"Intelligence", "Endurance"},
+    ["spellsword"] = {"Willpower", "Endurance"},
+    ["thief"] = {"Speed", "Agility"},
+    ["warrior"] = {"Strength", "Endurance"},
+    ["witchhunter"] = {"Intelligence", "Agility"},
 }
 
 local function getAttributeId(name)
@@ -145,6 +145,7 @@ local function CalculateVanillaMaxHealth(pid)
     end
 
     if changed then
+        tes3mp.LogMessage(1, string.format("[RetroactiveHealth] Corrected health for pid %d (%.1f → %.1f)", pid, oldMax, hp))
         tes3mp.SendStatsDynamic(pid)
     end
 
@@ -156,8 +157,7 @@ customEventHooks.registerHandler("OnPlayerAuthentified", function(eventStatus, p
     local player = Players[pid]
     if player and player:IsServerStaff() then return end
 
-    if tes3mp.GetLevel(pid) <= 1 then return end   -- Safety guard for new characters
-
+    if tes3mp.GetLevel(pid) <= 1 then return end -- Safety guard for new characters
     CalculateVanillaMaxHealth(pid)
 end)
 

@@ -98,9 +98,8 @@ local function CalculateVanillaMaxHealth(pid)
     if favored["Strength"] then startStr = startStr + 10 end
     if favored["Endurance"] then startEnd = startEnd + 10 end
 
-    -- Lady bonus (exact match)
     local ladyBonus = 0
-    if applyLadyBonus and (birthsign == "lady's favor" or birthsign == "lady" or birthsign == "the lady") then
+    if applyLadyBonus and birthsign:find("lady") then
         ladyBonus = 25
     end
 

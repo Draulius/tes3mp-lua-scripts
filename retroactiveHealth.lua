@@ -1,7 +1,7 @@
 -- =====================================================
 -- Retroactive Health - TES3MP 0.8.1
 -- Made by Lindran, originally for Mahkan Server, now released for public use
--- Use or edit the script as you see fit, I just request you give me credit
+-- Use or edit the script as you see fit, I just request that you give me credit
 -- =====================================================
 -- Note: Staff characters are not corrected on login
 -- ====================== CONFIG =======================

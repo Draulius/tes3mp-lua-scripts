@@ -1,7 +1,7 @@
 -- =====================================================
 -- Vanilla-Max Retroactive Health - TES3MP 0.8.1
 -- Made by Lindran originally for Mahkan Server, now released for public use
--- Use or edit it as you see fit, just give me credit
+-- Use or edit it as you see fit, I just request you give me credit
 -- =====================================================
 -- Staff characters are not corrected on login
 -- ====================== CONFIG =======================

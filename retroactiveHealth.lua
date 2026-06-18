@@ -2,7 +2,7 @@
 -- Vanilla-Max Retroactive Health - TES3MP 0.8.1
 -- Made by Lindran originally for Mahkan Server, now released for public use
 -- =====================================================
---Staff characters are not corrected on login
+-- Staff characters are not corrected on login
 -- ====================== CONFIG =======================
 local allowHealthDecrease = false    -- If true, allows Hp to be corrected downwards (less safe for boosted characters).
 local applyLadyBonus      = false    -- If true, The Lady birthsign gives +25 Endurance to all health gains (from level 1 onward). Keep false for default TES3MP 0.8.1 behavior.

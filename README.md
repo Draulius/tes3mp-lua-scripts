@@ -8,5 +8,5 @@ In other words, if you ignored Endurance for many levels, you can still put poin
 Staff characters are exempt to being automatically adjusted on login, however the script will still fire if you change your level like with console.
 
 Additionally, in the script's configuration:
-1. You can turn The Lady birthsign vanilla HP bonus behavior on or off. (false by default)
-2. You can choose to set HP being corrected downwards true or false. This will fix your health if it's higher than it's supposed to be. (false by default)
+allowHealthDecrease: If true, allows HP to be corrected downwards (like if you lower END with bittercup). Staff not affected. False by default.
+applyLadyBonus: If true, The Lady birthsign gives +25 Endurance to all health gains. Keep false for default TES3MP 0.8.1 behavior. False by default.

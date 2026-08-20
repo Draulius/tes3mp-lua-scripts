@@ -158,7 +158,7 @@ customEventHooks.registerHandler("OnPlayerAuthentified", function(eventStatus, p
     local player = Players[pid]
     if player and player:IsServerStaff() then return end
 
-    if tes3mp.GetLevel(pid) <= 1 then return end -- Safety guard for new characters, remove if you want.
+    if tes3mp.GetLevel(pid) <= 1 then return end -- Safety guard for level 1 characters, remove if you want.
     CalculateVanillaMaxHealth(pid)
 end)
 

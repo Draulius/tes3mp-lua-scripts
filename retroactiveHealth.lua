@@ -3,7 +3,7 @@
 -- This script gives you the full health bonus of Endurance retroactively, no matter how late you put points towards it.
 -- ====================== CONFIG =======================
 local allowHealthDecrease = false -- If true, allows HP to be corrected downwards (like if you lower END with bittercup). Staff not affected.
-local applyLadyBonus = false -- If true, The Lady birthsign gives +25 Endurance to all health gains. Keep false for default TES3MP 0.8.1 behavior.
+local applyLadyBonus = false -- If true, The Lady birthsign acts as +25 Endurance to all health gains. Keep false for default TES3MP 0.8.1 behavior.
 -- =====================================================
 -- Do not edit below unless you know what you are doing.
 
@@ -158,7 +158,7 @@ customEventHooks.registerHandler("OnPlayerAuthentified", function(eventStatus, p
     local player = Players[pid]
     if player and player:IsServerStaff() then return end
 
-    if tes3mp.GetLevel(pid) <= 1 then return end -- Safety guard for new characters
+    if tes3mp.GetLevel(pid) <= 1 then return end -- Safety guard for new characters, remove if you want.
     CalculateVanillaMaxHealth(pid)
 end)
 

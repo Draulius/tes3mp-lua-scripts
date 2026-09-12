@@ -1,4 +1,4 @@
--- Retroactive Health v1.04 - TES3MP 0.8.1
+-- Retroactive Health v1.05 - TES3MP 0.8.1
 -- Made by Lindran, originally for Mahkan Server, now released for public use.
 -- This script gives you the full health bonus of Endurance retroactively, no matter how late you put points towards it.
 -- Staff not affected by login correction.
@@ -47,10 +47,9 @@ local vanillaClassFavored = {
 
 local function getAttributeId(name)
     local id = tes3mp.GetAttributeId(name)
-    return (id == -1) and (name == "Strength" and 0 or 5) or id
+    return (id == -1) and 5 or id
 end
 
-local STRENGTH_ID = getAttributeId("Strength")
 local ENDURANCE_ID = getAttributeId("Endurance")
 
 local function CalculateVanillaMaxHealth(pid)
@@ -61,7 +60,6 @@ local function CalculateVanillaMaxHealth(pid)
     if level < 1 then level = 1 end
 
     local currentEnd = tes3mp.GetAttributeBase(pid, ENDURANCE_ID)
-    local currentStr = tes3mp.GetAttributeBase(pid, STRENGTH_ID)
 
     local character = player.data.character or {}
     local race = string.lower(character.race or "")
@@ -135,13 +133,13 @@ local function CalculateVanillaMaxHealth(pid)
     local changed = false
 
     if hp > oldMax then
-        tes3mp.SetHealthCurrent(pid, current + (hp - oldMax))
-        tes3mp.SetHealthBase(pid, hp)
+        player:SetHealthCurrent(current + (hp - oldMax))
+        player:SetHealthBase(hp)
         changed = true
     elseif hp < oldMax and allowHealthDecrease then
-        tes3mp.SetHealthBase(pid, hp)
+        player:SetHealthBase(hp)
         if current > hp then
-            tes3mp.SetHealthCurrent(pid, hp)
+            player:SetHealthCurrent(hp)
         end
         changed = true
     end

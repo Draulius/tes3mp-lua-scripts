@@ -1,5 +1,5 @@
 -- Retroactive Health v1.05 - TES3MP 0.8.1
--- Made by Lindran, originally for Mahkan Server, now released for public use.
+-- Made by Lindran ("TestGuy"), originally for Mahkan Server, now released for public use.
 -- This script gives you the full health bonus of Endurance retroactively, no matter how late you put points towards it.
 -- Staff not affected by login correction.
 -- ====================== CONFIG =======================
